@@ -1,11 +1,5 @@
-import { Product } from "../types";
+import { Product, ProductCartItem } from "../types";
 import { CartInterceptor } from "./CartInterceptor.interface";
-
-type ProductCartItem = {
-    product: Product;
-    amount: number;
-    canIncrease: boolean;
-};
 
 export class ProductsCartInterceptor extends CartInterceptor<number, ProductCartItem, Product> {
     private static instance: ProductsCartInterceptor;
